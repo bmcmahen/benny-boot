@@ -26,11 +26,7 @@
     "passport-google": "^0.3.0",
     "express-session": "^1.7.2",
     "mongojs": "^0.13.1",
-    "body-parser": "^1.5.2",
-    "component-emitter": "^1.1.3",
-    "keymirror": "^0.1.0",
-    "underscore": "^1.6.0",
-    "es6-promise": "^1.0.0"
+    "body-parser": "^1.5.2"
   },
   "devDependencies": {
     "component-resolver": "^1.1.8",
