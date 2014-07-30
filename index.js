@@ -8,6 +8,7 @@ var passport = require('passport');
 var session = require('express-session');
 var swig = require('swig');
 var morgan = require('morgan');
+var npath = require('path');
 
 /**
  * Relative dependencies
@@ -22,7 +23,7 @@ var app = express();
 // app config
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
+app.set('views', npath.join(__dirname + '/templates'));
 
 // app middleware
 app.use(morgan('short'));

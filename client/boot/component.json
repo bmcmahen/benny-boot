@@ -1,0 +1,15 @@
+{
+  "name": "boot",
+  "description": "boot component",
+  "dependencies": {},
+  "development": {},
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [],
+  "locals": [
+    "app-styles",
+    "icons"  
+  ]
+}

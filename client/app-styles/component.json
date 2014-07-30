@@ -1,0 +1,8 @@
+{
+  "name": "app-styles",
+  "description": "app styles component",
+  "dependencies": {
+    "necolas/normalize.css": "*"
+  },
+  "styles": ["styles/*"]
+}
