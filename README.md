@@ -1,5 +1,9 @@
 # benny-boot
 
-An opinionated boilerplate for making basic apps using express, react, flux, and browserify. Building of js and css is handled by gulp. 
+An opinionated boilerplate consisting of express, mongojs, and google oauth on the server. Everything clientside is handled by Component, including the build process for js and css. 
 
-More soon...
+```
+$ npm install
+$ node bin/build -b
+$ node index
+```
