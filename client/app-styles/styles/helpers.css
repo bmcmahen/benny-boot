@@ -1,0 +1,61 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Clearfix */
+
+.clearfix,
+.row { 
+  display: block; 
+}
+
+.clearfix:after,
+.row:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.pull-right                 { float:right; }
+.pull-left                  { float: left; }
+.circle                     { border-radius: 50%; }
+.quiet                      { color: var(--lighter-black) color: var(--darken2) }
+.dark .quiet                { color: var(--grey) color: var(--lighten2) }
+.hidden                     { display: none; }
+.text-right                 { text-align: right; }
+.space > *                  { margin-right: 5px; }
+.space-top-less             { margin-top: 10px; }
+.space-top                  { margin-top: 20px; }
+.space-top-more             { margin-top: 50px; }
+.space-bottom-less          { margin-bottom: 10px; }
+.space-bottom               { margin-bottom: 20px; }
+.space-bottom-more          { margin-bottom: 50px; }
+.hide-tablet, .hide-mobile  { display: block; }
+.show-tablet, .show-mobile  { display: none; }
+.show-mobile                { display: none; }
+img.inline, .inline         { display: inline-block; }
+.block                      { display: block; }
+.rounded-more               { border-radius: var(--rounded-more); }
+.rounded                    { border-radius: var(--rounded); }
+.fixed                      { position: fixed; }
+.stretch                    { width: 100%; }
+.center                     { text-align: center; }
+.contain                    { position: relative; }
+.clip                       { overflow: hidden; }
+.divider                    { margin: 0 10px; }
+
+
+.attach                     { position: absolute; }
+.bottom-right               { bottom: 0; right: 0; }
+.bottom-left                { bottom: 0; left: 0; }
+.top-left                   { top: 0; left: 0; }
+.top-right                  { top: 0; right: 0; }

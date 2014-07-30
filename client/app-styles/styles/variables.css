@@ -1,0 +1,71 @@
+:root {
+  
+  /* Colours */
+
+  --blue: #049cdb;
+  --green: #53BB64;
+  
+  /* Colour Types */
+
+  --primary-colour: var(--blue);
+  --success-colour: var(--green);
+  --danger-colour: var(--red);
+  --warning-colour: var(--yellow);
+
+  /* Extra Colours */
+
+  --black: #2A2B24;
+  --lighter-black: #736448;
+  --white: #FFF;
+  --light: #F8F8FA;
+  --grey: #e9eef2;
+  --grey-dark: #404040;
+  --brown: #464952;
+  --silver: #bdc3c7;
+  --denim: #3c4e5a;
+  --orange: #f04e28;
+  --wine: #b2194b;
+  --yellow: #f1e000;
+  --purple: #4952a6;
+  --navy: #00395d;
+  --red: #f04e28;
+
+  /* Darkeners */
+
+  --darken: rgba(0, 0, 0, 0.05);
+  --darken0: rgba(0, 0, 0, 0.10);
+  --darken1: rgba(0, 0, 0, 0.25);
+  --darken2: rgba(0, 0, 0, 0.50);
+  --darken3: rgba(0, 0, 0, 0.75);
+  --darken4: rgba(0, 0, 0, 0.90);
+
+  /* Lighteners */
+
+  --lighten: rgba(255, 255, 255, 0.05);
+  --lighten0: rgba(255, 255, 255, 0.10);
+  --lighten1: rgba(255, 255, 255, 0.25);
+  --lighten2: rgba(255, 255, 255, 0.50);
+  --lighten3: rgba(255, 255, 255, 0.75);
+  --lighten4: rgba(255, 255, 255, 0.90);
+  
+  /* Sizing */
+
+  --much-smaller: .69em;
+  --smaller: .83em;
+  --larger: 1.3em;
+  --much-larger: 1.44em;
+  
+  /* Fonts */
+
+  --primary-font: jaf-bernino-sans, 'helvetica neue', helvetica, arial, sans-serif;
+  --paragraph-font: freight-text-pro, "Georgia", Times, serif;
+  --primary-font-size: 15px;
+  --heading-font: jaf-bernino-sans-condensed, helvetica, arial, sans-serif;
+  --secondary-font: jaf-bernino-sans, 'helvetica neue', helvetica, arial, sans-serif;
+  --small-font: jaf-bernino-sans, helvetica, arial, sans-serif;
+
+  /* Border-Radius */
+
+  --rounded: 3px;
+  --rounded-more: 10px;
+}

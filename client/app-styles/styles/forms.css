@@ -1,0 +1,239 @@
+
+/* Forms */
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+form fieldset {
+  margin: 0 0 20px;
+}
+
+form fieldset label {
+  font: 14px/18px var(--secondary-font);
+  font-weight: 600;
+  display: block;
+  color: var(--grey-dark);
+  margin: 0 0 5px;
+}
+
+input,
+select,
+button {
+  vertical-align: middle;
+}
+
+textarea,
+input[type=password],
+input[type=text],
+input[type=search] {
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  color: var(--darken2);
+  font-weight: 400;
+  background: rgba(255,255,255,0.95);
+  padding: 10px;
+  border-radius: var(--rounded);
+  border: 1px solid;
+  border-color: var(--darken1);
+  transition: border-color .1s;
+  outline: none;
+  font-size: 14px;
+  -webkit-appearance: none;
+}
+
+input[type=text].search,
+input[type=search].search {
+  border-radius: 25px;
+}
+
+textarea:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=search]:focus {
+  outline: thin dotted\8; /* ie8 below */
+  border-color: var(--darken3);
+  color: var(--darken3);
+}
+
+textarea.stretch,
+input.stretch[type='text'],
+input.stretch[type='password'],
+input.stretch[type='search'] { 
+  width: 100%; 
+}
+
+/* Large  */
+textarea.large,
+input[type=password].large,
+input[type=text].large,
+input[type=search].large {
+  height: 50px;
+  font-size: 1.3em;
+  line-height: 1.2em;
+  text-transform: none;
+}
+
+/* Errors & Messages */
+textarea.error,
+input[type=password].error,
+input[type=text].error {
+  border-color: var(--danger-colour);
+}
+
+form span.error {
+  position: absolute;
+  top: 21px;
+  right: 5px;
+  background: var(--danger-colour);
+  color: white;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+form .message-placeholder {
+  text-align: center;
+}
+
+form .message {
+  font-size: 13px;
+  background: #ddd;
+  background: var(--darken0);
+}
+
+form .message.error {
+  background: var(--danger-colour);
+  color: white;
+}
+
+form .message.success {
+  background-color: var(--success-colour);
+  color: white;
+}
+
+
+/* Forms with Icons */
+
+
+fieldset.with-icon,
+fieldset.with-icon-right {
+  position:relative;
+}
+  
+fieldset.with-icon input[type=text],
+fieldset.with-icon .btn {
+  padding-left: 35px;
+}
+
+fieldset.with-icon-right input[type=text] {
+  padding-right: 35px;
+}
+
+fieldset.with-icon i {
+  position: absolute;
+  top: 11px;
+  left: 13px;
+  color: #888;
+  font-size: 18px;
+  z-index: 2;
+}
+
+fieldset.with-icon-right i {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+
+/* Text area */
+
+textarea {
+  height: 100px;
+  max-width: none;
+  overflow: auto;
+  resize: none;
+}
+
+textarea.resize { 
+  resize: both; 
+}
+
+/* Select */
+
+select {
+  display: block;
+  height: 40px;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border-radius: var(--rounded);
+  border: 1px solid var(--darken1);
+  transition: border-color ease-in-out .15s;
+}
+
+/* Groups */
+
+.input-group > * {
+  border-radius: 0 0 0 0;
+  float: left;
+}
+
+.input-group > *:first-child {
+  border-right: none;
+  border-radius: var(--rounded) 0 0 var(--rounded);
+}
+
+.input-group > *:last-child {
+  border-radius: 0 var(--rounded) var(--rounded) 0;
+}
+
+
+/* Checkboxes */
+.checkbox input[type=checkbox] { display: none; }
+
+.checkbox label {
+  cursor: pointer;
+  padding: 5px 10px;
+  display: block;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.checkbox label:hover {
+  background: rgba(0,0,0,0.025);
+}
+
+.checkbox input[type=checkbox]:checked + label {
+  color: rgba(0,0,0,0.75);
+}
+
+.checkbox input[type=checkbox] + .checkbox-label:before {
+  background-color: #fff;
+  margin-right: 8px;
+  display: inline-block; 
+  content: '';
+  background-size: 25px;
+  width: 23px;
+  vertical-align: -6px;
+  background-image: url('/client/icons/files/ios7-checkmark-empty.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 23px;
+  text-transform: capitalize;
+  color: rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: 3px;
+}
+
+.checkbox input[type=checkbox]:not(:checked) + .checkbox-label:before {
+  background-image: none;
+  content: '';
+}

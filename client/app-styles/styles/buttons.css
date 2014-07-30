@@ -1,0 +1,306 @@
+/* Buttons */
+
+.confirmation-actions button,
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  vertical-align: middle;
+  background-image: none;
+  margin: 0px;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  height: 40px;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+.btn:active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  color: var(--black);
+  color: var(--darken3);
+  text-decoration: none;
+}
+
+/* Size variations */
+
+.btn-large {
+  font-size: var(--larger);
+  line-height: 1.4em;
+  height: 50px;
+}
+
+.btn-small {
+  font-size: var(--much-smaller);
+  line-height: var(--much-smaller);
+  height: 32px;
+}
+
+.btn.btn-block {
+  width: 100%;
+}
+
+
+/* Default Button */
+
+.confirmation-actions button,
+.btn-default {
+  color: var(--black);
+  color: var(--darken2);
+  background-color: var(--white);
+  border-color: var(--darken1);
+}
+
+.btn-default:hover,
+.btn-default:active {
+  color: var(--black);
+  color: var(--darken2);
+  background-color: darken(var(--white), 5%);
+}
+
+
+/* Disabled Button */ 
+
+.loading .btn,
+.btn.disabled, 
+.btn[disabled], 
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+
+/* Action Buttons */
+
+.btn-primary,
+.btn-success,
+.btn-danger {
+  color: white;
+  color: var(--lighten4);
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-danger:hover {
+  color: white;
+  color: var(--lighten4);
+}
+
+/* Primary */ 
+
+.btn-primary {
+  background-color: var(--primary-colour);
+  border-color: darken(var(--primary-colour), 7%);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: darken(var(--primary-colour), 10%);
+  border-color: darken(var(--primary-colour), 17%);
+}
+
+/* Success */
+
+.btn-success {
+  background-color: var(--success-colour);
+  border-color: darken(var(--success-colour), 7%);
+}
+
+.btn-success:hover,
+.btn-success:active {
+  background-color: darken(var(--success-colour), 10%);
+  border-color: darken(var(--success-colour), 17%);
+}
+
+/* Danger */
+
+.btn-danger {
+  background-color: var(--danger-colour);
+  border-color: darken(var(--danger-colour), 7%);
+}
+
+.btn-danger:hover,
+.btn-danger:active {
+  background-color: darken(var(--danger-colour), 10%);
+  border-color: darken(var(--danger-colour), 17%);
+}
+
+/* Circular Buttons */
+
+span.btn-circle,
+a.btn-circle,
+button.btn-circle {
+  margin-right: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+  background: rgba(255,255,255,0.9);
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+span.btn-circle:active,
+a.btn-circle:active,
+button.btn-cricle:active {
+  box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+span.btn-circle,
+a.btn-circle:hover i,
+button.btn-circle:hover i {
+  color: #333;
+  text-decoration: none;
+}
+
+span.btn-circle i,
+a.btn-circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 16px;
+  margin-left: -8px;
+  margin-top: -17px;
+}
+
+span.btn-circle i:before,
+a.btn-circle i:before {
+  font-size: 35px;
+}
+
+a.btn-circle.btn-small {
+  width: 30px;
+  height: 30px;
+  border-width: 1px;
+}
+
+a.btn-circle.btn-small i {
+  margin-top: -6px;
+}
+
+/* Outline button */
+
+a.btn-outline,
+button.btn-outline {
+  border: 1px solid rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.6) !important;
+  background-color: rgba(255,255,255,0.9);
+}
+
+a.btn-outline.btn-small,
+button.btn-outline.btn-small {
+  font-weight: 500;
+  height: 25px;
+  line-height: 18px;
+  padding: 0;
+}
+
+a.btn-outline:hover,
+button.btn-outline:hover {
+  border-color: rgba(0,0,0,1);
+  color: rgba(0,0,0,1) !important;
+  background-color: rgba(97, 226, 165, 0.9);
+}
+
+/* BTN Groups */
+
+/* Use btn-group to join buttons */
+/* <!-- --> eliminates whitespace, or keep button on the same line. */
+
+.btn-group {
+  display: inline-block;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+}
+
+.btn-group .btn+.btn, 
+.btn-group .btn+.btn-group, 
+.btn-group .btn-group+.btn, 
+.btn-group .btn-group+.btn-group {
+  margin-left: -1px;
+}
+
+.btn-group > .btn:first-child:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.btn-group > .btn-group {
+  float: left;
+}
+
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+
+.btn-group > .btn-group:first-child > .btn:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn-group:last-child > .btn:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.btn-group >.btn:hover, 
+.btn-group >.btn:focus, 
+.btn-group >.btn:active,
+.btn-group>.btn.active {
+  z-index: 2;
+}
+
+.btn-group .active {
+  background: var(--darken0);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.btn.btn-return {
+  width: auto;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+fieldset.with-icon.arrow-back i {
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  font-size: 25px;
+}
+
+button.btn-naked {
+  background: none;
+  border: none;
+}
