@@ -1,6 +1,0 @@
-{
-  "name": "icons",
-  "description": "icon component",
-  "styles": ["styles/*"],
-  "files": ["fonts/*"]
-}

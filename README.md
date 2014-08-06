@@ -1,9 +1,9 @@
 # benny-boot
 
-An opinionated boilerplate consisting of express, mongojs, and google oauth on the server. Everything clientside is handled by Component, including the build process for js and css. 
+An opinionated boilerplate consisting of express, mongojs, and google oauth on the server. Everything clientside is handled with Duo. CSS utilizes Myth to add variable support & vender prefixes. 
 
 ```
 $ npm install
-$ node bin/build -b
+$ node builder.js -b
 $ node index
 ```

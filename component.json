@@ -1,7 +1,0 @@
-{
-  "name": "app",
-  "paths": ["client"],
-  "locals": [
-    "boot"
-  ]
-}

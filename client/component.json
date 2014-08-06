@@ -1,0 +1,10 @@
+{
+  "name": "entry",
+  "version": "0.0.1",
+  "dependencies": {
+    "necolas/normalize.css": "^3.0.0",
+    "component/dom": "^1.0.5",
+    "driftyco/ionicons": "^1.5.2",
+    "bmcmahen/transit": "^0.2.1"
+  }
+}
