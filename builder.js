@@ -9,12 +9,14 @@ var write = require('fs').writeFileSync;
 var sane = require('sane');
 var async = require('async');
 var clc = require('cli-color');
+var react = require('react-tools');
 
 var errorColor = clc.red.bold;
 var successColor = clc.green; 
 
 var clientRoot = path.join(__dirname, 'client');
 var out = path.join(__dirname, 'public');
+
 
 /**
  * Options
@@ -26,11 +28,10 @@ program
   .option('-b, --build', 'build components & resources')
   .parse(process.argv);
 
-/**
- * Create duo instance
- */
 
-var duo = Duo(clientRoot);
+function create(){
+  return Duo(clientRoot);
+}
 
 /**
  * Watch app
@@ -38,7 +39,7 @@ var duo = Duo(clientRoot);
 
 if (program.watch) {
   console.log(clc.blue('Watching for changes...'));
-  var watcher = sane(clientRoot, ['**/*.{js,css,html}']);
+  var watcher = sane(clientRoot, ['**/*.{js,css,html,jsx}']);
   watcher.on('change', function(file){
     return path.extname(file) === '.css'
       ? buildStyles()
@@ -51,7 +52,7 @@ if (program.watch) {
  */
 
 if (program.build) {
-  async.parallel([buildScripts, buildStyles], function(err){
+  async.parallel([buildScripts], function(err){
     if (err) throw err;
     process.exit();
   });
@@ -64,7 +65,9 @@ if (program.build) {
  */
 
 function buildScripts(fn){
-  duo.entry('app.js')
+  create().entry('app.js')
+    .assets('../public')
+    .use(jsx())
     .run(function(err, src){
       if (err) {
         if (fn) return fn(err);
@@ -84,7 +87,9 @@ function buildScripts(fn){
  */
 
 function buildStyles(fn){
-  duo.entry('app.css')
+  create().entry('app.css')
+    .development(true)
+    .assets('../public')
     .run(function(err, src){
       if (err) {
         if (fn) return fn(err);
@@ -104,4 +109,21 @@ function buildStyles(fn){
       console.log(successColor('Styles built:', len / 1024 | 0, 'kb'));
       if (fn) fn(err);
     });
+}
+
+
+function jsx(opts){
+  opts = opts || {};
+  var JS_COMMENTS_REGEX = /(?:\/\*(?:[\s\S]*?)\*\/)|(?:\/\/(?:.*)$)/gm;
+  return function jsx(file, duo){
+    console.log('running!', file.type);
+    if (file.type !== 'jsx') return;
+    var commentMatches = file.src.match(JS_COMMENTS_REGEX);
+    var hasJsxComment = commentMatches && (commentMatches[0].indexOf('/**') !== -1 && commentMatches[0].indexOf('@jsx') !== -1);
+    if (!hasJsxComment) {
+      file.src = '/** @jsx React.DOM */\n' + file.src;
+    }
+    file.src = react.transform(file.src, opts);
+    file.type = 'js';
+  }
 }

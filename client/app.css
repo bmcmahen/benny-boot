@@ -1,23 +1,2 @@
-
-/** Normalize Reset **/
-
-@import 'normalize.css';
-
-/** App Styles **/
-
-@import './universal-styles/variables.css';
-@import './universal-styles/base.css';
-@import './universal-styles/buttons.css';
-@import './universal-styles/forms.css';
-@import './universal-styles/grid.css';
-@import './universal-styles/helpers.css';
-@import './universal-styles/navigation.css';
-@import './universal-styles/table.css';
-@import './universal-styles/text.css';
-@import './universal-styles/tip.css';
-@import './universal-styles/animations.css';
-@import './universal-styles/ionoicons.css';
-
-/** Modules **/
-
-@import 'ionoicons.css';
+body {
+}
