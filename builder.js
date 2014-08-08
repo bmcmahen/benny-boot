@@ -52,7 +52,7 @@ if (program.watch) {
  */
 
 if (program.build) {
-  async.parallel([buildScripts], function(err){
+  async.parallel([buildScripts, buildStyles], function(err){
     if (err) throw err;
     process.exit();
   });
@@ -67,7 +67,6 @@ if (program.build) {
 function buildScripts(fn){
   create().entry('app.js')
     .assets('../public')
-    .use(jsx())
     .run(function(err, src){
       if (err) {
         if (fn) return fn(err);
@@ -111,6 +110,10 @@ function buildStyles(fn){
     });
 }
 
+/**
+ * JSX complilation plugin for react
+ * @param  {Object} opts 
+ */
 
 function jsx(opts){
   opts = opts || {};

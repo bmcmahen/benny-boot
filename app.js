@@ -9,12 +9,13 @@ var session = require('express-session');
 var swig = require('swig');
 var morgan = require('morgan');
 var npath = require('path');
+var http = require('http');
 
 /**
  * Relative dependencies
  */
 
-require('./auth');
+require('./lib/auth');
 
 
 // Create our app
@@ -23,7 +24,7 @@ var app = express();
 // app config
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
-app.set('views', npath.join(__dirname + '/templates'));
+app.set('views', npath.join(__dirname + '/lib/templates'));
 
 // app middleware
 app.use(morgan('short'));
@@ -34,7 +35,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // routes
-app.use('/', require('./routes/app'));
-app.use('/auth', require('./routes/auth'));
+app.use('/', require('./lib/routes/app'));
+app.use('/auth', require('./lib/routes/auth'));
 
+// start server
 app.listen(3000);

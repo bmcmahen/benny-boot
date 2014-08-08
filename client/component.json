@@ -1,9 +1,25 @@
 {
   "name": "entry",
   "version": "0.0.1",
+  "main": {
+    "js": "app.js",
+    "css": "app.css"
+  },
   "dependencies": {
-    "component/dom": "^1.0.5",
     "bmcmahen/transit": "^0.2.1",
-    "bredele/datastore": "1.0.6"
+    "ripplejs/ripple": "^0.5.3",
+    "ripplejs/refs": "^0.1.2",
+    "ripplejs/events": "^0.1.2",
+    "ripplejs/bind-methods": "^1.0.0",
+    "ripplejs/computed": "^0.2.0",
+    "visionmedia/superagent": "^0.18.2",
+    "component/popup": "^0.0.2",
+    "component/inherit": "^0.0.3",
+    "yields/merge": "^1.0.0",
+    "component/emitter": "^1.1.3",
+    "component/type": "^1.0.0",
+    "visionmedia/debug": "*",
+    "component/baar": "^1.0.0",
+    "necolas/normalize.css": "^3.0.1"
   }
 }

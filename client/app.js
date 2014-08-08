@@ -4,8 +4,10 @@
 
 var router = require('transit');
 
+var view = require('./examples/example-view');
+
 router('/', function(ctx, next){
-  console.log('hi home');
+  view.appendTo(document.body);
 });
 
 router.listen('/');
